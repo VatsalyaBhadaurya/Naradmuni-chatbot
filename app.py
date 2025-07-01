@@ -33,65 +33,79 @@ peak_stats = {
     'gpu_load': 0,
     'gpu_memory': 0,
     'gpu_temp': 0,
-    'gpu_temp_actual': 0  # Store actual temperature
+    'gpu_temp_actual': 0
 }
 
-def get_system_stats():
-    global query_in_progress, peak_stats, baseline_stats
+def get_gpu_stats():
+    """Get GPU statistics using NVML."""
+    gpu_stats = []
     try:
-        # CPU stats - use interval=0.1 for more responsive reading
+        deviceCount = pynvml.nvmlDeviceGetCount()
+        for i in range(deviceCount):
+            handle = pynvml.nvmlDeviceGetHandleByIndex(i)
+            
+            # Get device name - handle both bytes and str return types
+            name = pynvml.nvmlDeviceGetName(handle)
+            if isinstance(name, bytes):
+                name = name.decode('utf-8')
+            
+            # Get utilization rates
+            utilization = pynvml.nvmlDeviceGetUtilizationRates(handle)
+            gpu_util = utilization.gpu
+            
+            # Get memory info
+            memory_info = pynvml.nvmlDeviceGetMemoryInfo(handle)
+            memory_used = memory_info.used / (1024 * 1024)  # Convert to MB
+            memory_total = memory_info.total / (1024 * 1024)  # Convert to MB
+            
+            # Get temperature with better error handling
+            try:
+                temperature = pynvml.nvmlDeviceGetTemperature(handle, pynvml.NVML_TEMPERATURE_GPU)
+            except (pynvml.NVMLError, Exception) as e:
+                print(f"Error getting GPU temperature: {e}")
+                temperature = 0
+            
+            gpu_stats.append({
+                'name': name,
+                'load': gpu_util,
+                'memory_used': round(memory_used, 2),
+                'memory_total': round(memory_total, 2),
+                'temperature': temperature
+            })
+            
+            # Update peak stats if query is in progress
+            if query_in_progress:
+                peak_stats['gpu_temp'] = max(peak_stats['gpu_temp'], temperature)
+                peak_stats['gpu_temp_actual'] = max(peak_stats['gpu_temp_actual'], temperature)
+    except Exception as e:
+        print(f"Error getting GPU stats: {e}")
+    
+    return gpu_stats
+
+def update_peak_stats(cpu_percent, memory_percent, gpu_stats):
+    """Update peak statistics during monitoring."""
+    if not query_in_progress or not gpu_stats:
+        return
+        
+    peak_stats['cpu'] = max(peak_stats['cpu'], cpu_percent)
+    peak_stats['memory'] = max(peak_stats['memory'], memory_percent)
+    peak_stats['gpu_load'] = max(peak_stats['gpu_load'], gpu_stats[0]['load'])
+    peak_stats['gpu_memory'] = max(peak_stats['gpu_memory'], gpu_stats[0]['memory_used'])
+    peak_stats['gpu_temp'] = max(peak_stats['gpu_temp'], gpu_stats[0]['temperature'])
+    peak_stats['gpu_temp_actual'] = max(peak_stats['gpu_temp_actual'], gpu_stats[0]['temperature'])
+
+def get_system_stats():
+    """Get system statistics including CPU, memory, and GPU."""
+    try:
+        # CPU and memory stats
         cpu_percent = psutil.cpu_percent(interval=0.1)
         memory = psutil.virtual_memory()
         memory_used = memory.used / (1024 * 1024 * 1024)  # Convert to GB
         memory_total = memory.total / (1024 * 1024 * 1024)  # Convert to GB
         
-        # GPU stats using NVML
-        gpu_stats = []
-        try:
-            deviceCount = pynvml.nvmlDeviceGetCount()
-            for i in range(deviceCount):
-                handle = pynvml.nvmlDeviceGetHandleByIndex(i)
-                
-                # Get device name - handle both bytes and str return types
-                name = pynvml.nvmlDeviceGetName(handle)
-                if isinstance(name, bytes):
-                    name = name.decode('utf-8')
-                
-                # Get utilization rates
-                utilization = pynvml.nvmlDeviceGetUtilizationRates(handle)
-                gpu_util = utilization.gpu  # This is the actual GPU utilization percentage
-                
-                # Get memory info
-                memory_info = pynvml.nvmlDeviceGetMemoryInfo(handle)
-                memory_used = memory_info.used / (1024 * 1024)  # Convert to MB
-                memory_total = memory_info.total / (1024 * 1024)  # Convert to MB
-                
-                # Get temperature with better error handling
-                try:
-                    temperature = pynvml.nvmlDeviceGetTemperature(handle, pynvml.NVML_TEMPERATURE_GPU)
-                except pynvml.NVMLError as e:
-                    print(f"NVML temperature error: {e}")
-                    temperature = 0
-                except Exception as e:
-                    print(f"General temperature error: {e}")
-                    temperature = 0
-                
-                gpu_stats.append({
-                    'name': name,
-                    'load': gpu_util,
-                    'memory_used': round(memory_used, 2),
-                    'memory_total': round(memory_total, 2),
-                    'temperature': temperature
-                })
-                
-                # Update peak stats if query is in progress
-                if query_in_progress:
-                    peak_stats['gpu_temp'] = max(peak_stats['gpu_temp'], temperature)
-                
-        except Exception as e:
-            print(f"Error getting GPU stats: {e}")
-            gpu_stats = []
-            
+        # GPU stats
+        gpu_stats = get_gpu_stats()
+        
         stats = {
             'cpu_percent': round(cpu_percent, 2),
             'memory_used': round(memory_used, 2),
@@ -110,38 +124,35 @@ def get_system_stats():
                     'temp': round(gpu_stats[i]['temperature'] - baseline_stats['gpu_stats'][i]['temperature'], 2)
                 } for i in range(len(gpu_stats))]
             }
-
-            # Update peak stats if query is in progress
-            if query_in_progress and len(gpu_stats) > 0:
-                peak_stats['cpu'] = max(peak_stats['cpu'], cpu_percent)
-                peak_stats['memory'] = max(peak_stats['memory'], memory.percent)
-                peak_stats['gpu_load'] = max(peak_stats['gpu_load'], gpu_stats[0]['load'])
-                peak_stats['gpu_memory'] = max(peak_stats['gpu_memory'], gpu_stats[0]['memory_used'])
-                peak_stats['gpu_temp'] = max(peak_stats['gpu_temp'], gpu_stats[0]['temperature'])
-                peak_stats['gpu_temp_actual'] = max(peak_stats['gpu_temp_actual'], gpu_stats[0]['temperature'])
+            
+            # Update peak stats
+            update_peak_stats(cpu_percent, memory.percent, gpu_stats)
 
         # Add to history
         stats_history.append(stats)
-        
         return stats
     except Exception as e:
         print(f"Error getting system stats: {str(e)}")
         return None
 
-@app.route('/start-monitoring', methods=['POST'])
-def start_monitoring():
-    global baseline_stats, query_in_progress, peak_stats
-    baseline_stats = get_system_stats()
-    query_in_progress = True
-    # Reset peak stats
+def reset_peak_stats():
+    """Reset peak statistics to initial values."""
+    global peak_stats
     peak_stats = {
         'cpu': 0,
         'memory': 0,
         'gpu_load': 0,
         'gpu_memory': 0,
         'gpu_temp': 0,
-        'gpu_temp_actual': 0  # Reset actual temperature
+        'gpu_temp_actual': 0
     }
+
+@app.route('/start-monitoring', methods=['POST'])
+def start_monitoring():
+    global baseline_stats, query_in_progress
+    baseline_stats = get_system_stats()
+    query_in_progress = True
+    reset_peak_stats()
     return jsonify({'status': 'success'})
 
 @app.route('/stop-monitoring', methods=['POST'])
@@ -290,45 +301,19 @@ def home():
                 </div>
             </div>
             <script>
-                let cpuData = {
-                    x: [],
-                    y: [],
-                    name: 'CPU Usage',
-                    type: 'scatter',
-                    line: {
-                        color: '#2196F3',
-                        width: 2
-                    }
+                // Common plot configuration
+                const PLOT_COLORS = {
+                    CPU: '#2196F3',
+                    GPU: '#4CAF50',
+                    TEMP: '#FF5722'
                 };
 
-                let gpuData = {
-                    x: [],
-                    y: [],
-                    name: 'GPU Usage',
-                    type: 'scatter',
-                    line: {
-                        color: '#4CAF50',
-                        width: 2
-                    }
-                };
-
-                let tempData = {
-                    x: [],
-                    y: [],
-                    name: 'GPU Temperature',
-                    type: 'scatter',
-                    line: {
-                        color: '#FF5722',
-                        width: 2
-                    }
-                };
-
-                const plotConfig = {
+                const BASE_PLOT_CONFIG = {
                     displayModeBar: false,
                     responsive: true
                 };
 
-                const plotLayout = {
+                const BASE_PLOT_LAYOUT = {
                     height: 350,
                     margin: {t: 30, b: 50, l: 50, r: 30},
                     xaxis: {
@@ -337,28 +322,48 @@ def home():
                         zeroline: false,
                         gridcolor: '#E0E0E0'
                     },
-                    yaxis: {
-                        title: 'Usage (%)',
-                        range: [0, 100],
-                        showgrid: true,
-                        zeroline: true,
-                        gridcolor: '#E0E0E0'
-                    },
                     showlegend: false,
                     plot_bgcolor: '#FFFFFF',
                     paper_bgcolor: '#FFFFFF'
                 };
 
-                const tempLayout = {
-                    ...plotLayout,
-                    yaxis: {
-                        title: 'Temperature (°C)',
-                        range: [20, 100],  // Most GPUs operate between 30-90°C
-                        showgrid: true,
-                        zeroline: true,
-                        gridcolor: '#E0E0E0'
-                    }
-                };
+                // Create plot data with common configuration
+                function createPlotData(name, color) {
+                    return {
+                        x: [],
+                        y: [],
+                        name: name,
+                        type: 'scatter',
+                        line: {
+                            color: color,
+                            width: 2
+                        }
+                    };
+                }
+
+                // Create plot layout with specific configuration
+                function createPlotLayout(title, yAxisTitle, yAxisRange) {
+                    return {
+                        ...BASE_PLOT_LAYOUT,
+                        title: title,
+                        yaxis: {
+                            title: yAxisTitle,
+                            range: yAxisRange,
+                            showgrid: true,
+                            zeroline: true,
+                            gridcolor: '#E0E0E0'
+                        }
+                    };
+                }
+
+                // Initialize plot data
+                const cpuData = createPlotData('CPU Usage', PLOT_COLORS.CPU);
+                const gpuData = createPlotData('GPU Usage', PLOT_COLORS.GPU);
+                const tempData = createPlotData('GPU Temperature', PLOT_COLORS.TEMP);
+
+                // Initialize plot layouts
+                const usageLayout = createPlotLayout('Usage', 'Usage (%)', [0, 100]);
+                const tempLayout = createPlotLayout('Temperature', 'Temperature (°C)', [20, 100]);
 
                 let startTime;
                 let monitoring = false;
@@ -367,19 +372,37 @@ def home():
 
                 // Initialize plots
                 Plotly.newPlot('cpuChart', [cpuData], {
-                    ...plotLayout,
+                    ...usageLayout,
                     title: 'CPU Usage'
-                }, plotConfig);
+                }, BASE_PLOT_CONFIG);
 
                 Plotly.newPlot('gpuChart', [gpuData], {
-                    ...plotLayout,
+                    ...usageLayout,
                     title: 'GPU Usage'
-                }, plotConfig);
+                }, BASE_PLOT_CONFIG);
 
                 Plotly.newPlot('tempChart', [tempData], {
                     ...tempLayout,
                     title: 'GPU Temperature'
-                }, plotConfig);
+                }, BASE_PLOT_CONFIG);
+
+                // Helper function to update data arrays
+                function updateDataArray(data, time, value, cutoff) {
+                    data.x.push(time);
+                    data.y.push(value);
+                    while (data.x[0] < cutoff) {
+                        data.x.shift();
+                        data.y.shift();
+                    }
+                }
+
+                // Helper function to update plot
+                function updatePlot(chartId, data) {
+                    Plotly.update(chartId, {
+                        x: [data.x],
+                        y: [data.y]
+                    });
+                }
 
                 function updatePeakStats(peakStats) {
                     lastPeakStats = peakStats;
@@ -395,27 +418,25 @@ def home():
                 }
 
                 function clearGraphs() {
-                    cpuData.x = [];
-                    cpuData.y = [];
-                    gpuData.x = [];
-                    gpuData.y = [];
-                    tempData.x = [];
-                    tempData.y = [];
+                    [cpuData, gpuData, tempData].forEach(data => {
+                        data.x = [];
+                        data.y = [];
+                    });
                     
                     Plotly.react('cpuChart', [cpuData], {
-                        ...plotLayout,
+                        ...usageLayout,
                         title: 'CPU Usage'
-                    }, plotConfig);
+                    }, BASE_PLOT_CONFIG);
 
                     Plotly.react('gpuChart', [gpuData], {
-                        ...plotLayout,
+                        ...usageLayout,
                         title: 'GPU Usage'
-                    }, plotConfig);
+                    }, BASE_PLOT_CONFIG);
 
                     Plotly.react('tempChart', [tempData], {
                         ...tempLayout,
                         title: 'GPU Temperature'
-                    }, plotConfig);
+                    }, BASE_PLOT_CONFIG);
                 }
 
                 function startMonitoring() {
@@ -434,51 +455,20 @@ def home():
                             const stats = await response.json();
                             if (!stats.error) {
                                 const time = (Date.now() - startTime) / 1000;
-                                
-                                // Update CPU data
-                                cpuData.x.push(time);
-                                cpuData.y.push(stats.cpu_percent);
-                                
-                                // Update GPU data if available
-                                if (stats.gpu_stats && stats.gpu_stats.length > 0) {
-                                    gpuData.x.push(time);
-                                    gpuData.y.push(stats.gpu_stats[0].load);
-                                    
-                                    // Update temperature data
-                                    tempData.x.push(time);
-                                    tempData.y.push(stats.gpu_stats[0].temperature);
-                                }
-                                
-                                // Keep only last 30 seconds
                                 const cutoff = time - 30;
-                                while (cpuData.x[0] < cutoff) {
-                                    cpuData.x.shift();
-                                    cpuData.y.shift();
-                                }
-                                while (gpuData.x[0] < cutoff) {
-                                    gpuData.x.shift();
-                                    gpuData.y.shift();
-                                }
-                                while (tempData.x[0] < cutoff) {
-                                    tempData.x.shift();
-                                    tempData.y.shift();
+                                
+                                // Update all data arrays
+                                updateDataArray(cpuData, time, stats.cpu_percent, cutoff);
+                                
+                                if (stats.gpu_stats && stats.gpu_stats.length > 0) {
+                                    updateDataArray(gpuData, time, stats.gpu_stats[0].load, cutoff);
+                                    updateDataArray(tempData, time, stats.gpu_stats[0].temperature, cutoff);
                                 }
                                 
-                                // Update plots
-                                Plotly.update('cpuChart', {
-                                    x: [cpuData.x],
-                                    y: [cpuData.y]
-                                });
-                                
-                                Plotly.update('gpuChart', {
-                                    x: [gpuData.x],
-                                    y: [gpuData.y]
-                                });
-
-                                Plotly.update('tempChart', {
-                                    x: [tempData.x],
-                                    y: [tempData.y]
-                                });
+                                // Update all plots
+                                updatePlot('cpuChart', cpuData);
+                                updatePlot('gpuChart', gpuData);
+                                updatePlot('tempChart', tempData);
                             }
                         } catch (error) {
                             console.error('Error updating charts:', error);
