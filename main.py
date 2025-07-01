@@ -5,36 +5,35 @@ import ollama
 import chromadb
 from tqdm import tqdm
 
-# Redirect stderr to suppress telemetry messages
+# Dummy file to suppress stderr output, jaise main apne dosto ki bakwas sunta hoon
 class DummyFile:
-    def write(self, x): pass
-    def flush(self): pass
+    def write(self, x): pass  
+    def flush(self): pass     # Flush karo ya nahi, humko kya fark padta hai
 
 sys.stderr = DummyFile()
 
-def extract_text_from_pdf(pdf_path):
+def extract_text_from_pdf(pdf_path):  #pdf mat use karo yrr pls haath jor raha hu :(
     with fitz.open(pdf_path) as doc:
         return " ".join(page.get_text() for page in doc)
 
-def extract_text_from_txt(txt_path):
+def extract_text_from_txt(txt_path):     # hum txt file se text nikaal rahe hai
     with open(txt_path, 'r', encoding='utf-8') as file:
         return file.read()
 
-def chunk_text(text, max_length=500):
+def chunk_text(text, max_length=500):    # text ko tod rahe hain jaise main...never mind
     words = text.split()
     return [" ".join(words[i:i + max_length]) for i in range(0, len(words), max_length)]
 
 def embed_documents(chunks):
     client = chromadb.PersistentClient(path="./embeddings")
 
-    try:
+    try:    # deleting old data, jaise main usseke purane messages delete karta hoon
         client.delete_collection("gbu_docs")
     except:
         pass
 
     collection = client.create_collection(name="gbu_docs")
     successful_embeds = 0
-
     for i, chunk in enumerate(tqdm(chunks, desc="Embedding Chunks")):
         try:
             embeddings = ollama.embed(model="mxbai-embed-large", input=chunk)["embeddings"]
@@ -45,13 +44,13 @@ def embed_documents(chunks):
             )
             successful_embeds += 1
         except Exception as e:
-            print(f"❌ Failed to embed chunk {i}: {e}")
+            print(f"❌chunk failed {e}")
     
-    print(f"\n✅ Successfully embedded {successful_embeds} out of {len(chunks)} chunks")
+    print(f"\n✅ Waah! {successful_embeds} chunks embed ho gaye, total {len(chunks)} mein se")
     return successful_embeds > 0
 
 def answer_query(prompt):
-    try:
+    try:                                                # ollama se query ka jawab le rahe hain
         client = chromadb.PersistentClient(path="./embeddings")
         collection = client.get_collection("gbu_docs")
 
@@ -63,7 +62,7 @@ def answer_query(prompt):
         
         documents = results["documents"]
         if not documents or not documents[0]:
-            return "No matching documents found."
+            return "No matching docs"
 
         context = "\n".join(doc[0] for doc in documents)
         prompt = f"""You are a helpful university assistant for Gautam Buddha University. Use the context below to answer the question clearly and concisely.
@@ -76,10 +75,10 @@ Question:
 
 Answer:"""
 
-        return ollama.generate(model="mistral", prompt=prompt).get("response", "No response generated.")
+        return ollama.generate(model="mistral", prompt=prompt).get("response", "No Response")
 
     except Exception as e:
-        return f"Error: {e}"
+        return f"Error ho gaya bhai: {e} huihuihi"
 
 def main():
     data_folder = "./data"
