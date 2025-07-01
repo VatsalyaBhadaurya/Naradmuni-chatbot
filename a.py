@@ -4,3 +4,4 @@ response = ollama.generate(
     prompt="What is Gautam Buddha University?"
 )
 print(response["response"])
+

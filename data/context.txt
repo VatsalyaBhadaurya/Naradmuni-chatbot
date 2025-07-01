@@ -6,134 +6,617 @@ Established: 2008 (under UP Act No. 9 of 2002)
 
 Type: State Government University
 
-Accreditation: NAAC B+, UGC 12(B) recognized
+Location: Greater Noida, Uttar Pradesh, India
+
+Accreditation: NAAC B+, UGC 12(B) recognized, AICTE approved
 
 Motto: "Character, Creativity, Competence"
+
+Vision: To emerge as a world-class university promoting excellence in higher education, research, and innovation
+
+Mission: To provide quality education that develops character, fosters creativity, and builds competence among students
 
 Chancellor: Hon. Chief Minister of Uttar Pradesh
 
 Vice-Chancellor: Prof. Rana Pratap Singh (renowned cancer biologist, former JNU professor)
 
+Registrar: Prof. Anil Kumar Agarwal
+
+Campus Type: Fully residential, eco-friendly green campus
+
 2. Campus and Infrastructure
 
-Location: Greater Noida, Uttar Pradesh, near Yamuna Expressway
+Location Details:
+- Address: Yamuna Expressway, Greater Noida, Uttar Pradesh - 201312
+- Distance from Delhi: 45 km via Yamuna Expressway
+- Nearest Metro Station: Pari Chowk (12 km)
+- Nearest Railway Station: Hazrat Nizamuddin (40 km)
+- Nearest Airport: Indira Gandhi International Airport (50 km)
 
-Campus Size: 511 acres (urban, fully residential)
+Campus Size and Design:
+- Total Area: 511 acres (urban, fully residential)
+- Architecture: Designed by renowned CP Kukreja Architects
+- Philosophy: Reflects Buddhist philosophy - library as head (knowledge center), schools as body (learning), admin as feet (support)
+- Landscape: Beautifully landscaped with over 50,000 trees and plants
+- Water Bodies: Multiple lakes and water features for aesthetic and environmental benefits
 
-Architecture: Designed by CP Kukreja Architects; reflects Buddhist philosophy (library as head, schools as body, admin as feet)
+Key Infrastructure Facilities:
+- Central Library: Bodhisattva Dr. B.R. Ambedkar Library
+  * Collection: 100,000+ books, journals, e-resources
+  * Digital Library: Access to international databases
+  * Reading Capacity: 1,500 students
+  * Special Collections: Buddhist studies, rare manuscripts
+  * 24x7 Access: Available for research scholars
 
-Facilities:
+- Academic Infrastructure:
+  * Smart Classrooms: 200+ with modern AV equipment
+  * Laboratories: 150+ specialized labs across all disciplines
+  * Auditoriums: 11+ venues (largest: Mahatma Gandhi Auditorium - 3,000 seats)
+  * Seminar Halls: 50+ for conferences and workshops
+  * Convention Center: 5,000 capacity for major events
 
-Central Library: Bodhisattva Dr. B.R. Ambedkar Library (100,000+ resources)
+- Technology Infrastructure:
+  * Central Computer Centre: 900+ high-end computers
+  * Wi-Fi Campus: 100% coverage with high-speed internet
+  * Data Center: Advanced cloud computing facilities
+  * Power Backup: 24x7 electricity with solar power integration
+  * Smart Campus: IoT-enabled facilities management
 
-Smart Classrooms, 11+ auditoriums (largest: 3,000 seats)
+- Support Facilities:
+  * Medical Center: 24x7 healthcare with specialist doctors
+  * Banking: Multiple ATMs, SBI and PNB branches
+  * Shopping Complex: Stationery, clothing, electronics
+  * Cafeterias: 8+ dining options across campus
+  * Guest House: 100+ rooms for visitors
+  * Transportation: Campus shuttle service
 
-Central Computer Centre with 900+ computers
+3. Detailed Hostel Information
 
-Wi-Fi enabled campus, 24x7 electricity backup
+Total Hostels: 18+ (separate for boys and girls)
+Accommodation Types:
+- Single Occupancy: AC and non-AC options
+- Double Occupancy: Most popular choice
+- Triple Occupancy: Economy option for undergraduates
 
-Cafeterias, ATMs, banks, shopping complex, medical center
+Boys Hostels:
+- Hostel 1-8: Undergraduate accommodation
+- PG Hostel 1-3: Postgraduate and PhD scholars
+- International Hostel: For foreign students
 
-3. Hostels
+Girls Hostels:
+- Hostel 9-15: Undergraduate accommodation
+- PG Hostel 4-6: Postgraduate and PhD scholars
+- Ladies International Hostel: For foreign students
 
-18+ Hostels (separate for boys and girls)
+Hostel Facilities:
+- Common Areas: TV lounges, recreation rooms
+- Study Facilities: Group study rooms, individual study tables
+- Fitness: Gymnasium in each hostel complex
+- Indoor Games: Table tennis, carrom, chess
+- Laundry: Washing machines and drying areas
+- Security: 24x7 guards, CCTV surveillance
+- Mess: Vegetarian and Jain food options
+- Internet: High-speed Wi-Fi in all rooms
 
-Single, double, and triple occupancy
+Hostel Rules and Regulations:
+- Timing: Different for UG and PG students
+- Guest Policy: Separate visiting hours for parents
+- Maintenance: Regular cleaning and upkeep
+- Disciplinary Committee: For conflict resolution
 
-Facilities include: Gym, common rooms, indoor games, reading halls
+4. Academic Structure and Programs
 
-4. Academic Structure
+Schools and Departments:
 
-Schools:
+School of Biotechnology:
+- B.Sc. Biotechnology
+- M.Sc. Biotechnology
+- PhD in Biotechnology
+- Research Areas: Molecular biology, genetic engineering, bioinformatics
+- Industry Collaborations: Biocon, Dr. Reddy's, Glenmark
 
-School of Biotechnology
-
-School of Engineering
-
-School of Information and Communication Technology
-
-School of Humanities & Social Sciences
-
-School of Vocational & Applied Sciences
-
-School of Law, Justice & Governance
-
-School of Management
-
-School of Buddhist Studies & Civilization
+School of Engineering:
+Departments:
+- Computer Science and Engineering (CSE)
+- Information Technology (IT)
+- Electronics and Communication Engineering (ECE)
+- Electrical and Electronics Engineering (EEE)
+- Mechanical Engineering
+- Civil Engineering
+- Applied Sciences and Humanities
 
 Popular Programs:
+- B.Tech CSE with specializations:
+  * Artificial Intelligence and Machine Learning
+  * Data Science and Analytics
+  * Cyber Security
+  * Internet of Things (IoT)
+  * Cloud Computing
+- B.Tech IT
+- B.Tech ECE
+- Integrated M.Tech programs
 
-B.Tech (CSE, AI, IT, ECE)
+School of Information and Communication Technology:
+- BCA (Bachelor of Computer Applications)
+- MCA (Master of Computer Applications)
+- M.Sc. Information Technology
+- Certificate courses in emerging technologies
+- Industry certifications: Microsoft, Oracle, Cisco
 
-BBA, MBA, Integrated MBA
+School of Humanities & Social Sciences:
+Departments:
+- English Literature
+- Hindi Literature
+- Psychology
+- Political Science
+- Economics
+- Sociology
+- History
+- Geography
+- Philosophy
 
-BCA, MCA
+Programs:
+- BA (Hons) in various subjects
+- MA in Literature, Psychology, Political Science
+- PhD in all humanities subjects
 
-BA LLB, LLM
+School of Vocational & Applied Sciences:
+- B.Voc programs in various trades
+- Diploma courses
+- Skill development programs
+- Industry-aligned curricula
 
-PhD in multiple disciplines
+School of Law, Justice & Governance:
+- BA LLB (5-year integrated)
+- BBA LLB (5-year integrated)
+- LLM in various specializations
+- PhD in Law
+- Moot Court facility
+- Legal aid clinic
 
-5. Sports and Recreation
+School of Management:
+- BBA (Bachelor of Business Administration)
+- MBA (Master of Business Administration)
+- Integrated MBA (5-year program)
+- Executive MBA for working professionals
+- PhD in Management
+- Specializations: Finance, Marketing, HR, Operations, International Business
+
+School of Buddhist Studies & Civilization:
+- BA Buddhist Studies
+- MA Buddhist Studies
+- PhD in Buddhist Philosophy
+- Research in Buddhist literature and culture
+- International collaborations with Buddhist universities
+
+5. Comprehensive Sports and Recreation Facilities
 
 Eklavya Sports Complex:
+- Total Area: 25 acres dedicated to sports
+- Vision: Olympic-standard facilities for students
 
-Outdoor: Cricket stadium, football ground, synthetic tennis/basketball/volleyball courts, 8-lane athletic track
+Outdoor Facilities:
+- Cricket Stadium: International standard with floodlights
+- Football Ground: FIFA standard artificial turf
+- Athletic Track: 8-lane 400m synthetic track
+- Tennis Courts: 4 synthetic courts with floodlights
+- Basketball Courts: 6 outdoor courts
+- Volleyball Courts: 4 courts
+- Badminton Courts: 8 outdoor courts
+- Hockey Ground: Astro turf
+- Lawn Tennis Academy: Professional coaching available
 
-Indoor: Stadium (2,000 capacity), squash, badminton, basketball, table tennis
+Indoor Sports Complex:
+- Main Stadium: 2,000 seating capacity
+- Badminton Hall: 8 courts with wooden flooring
+- Basketball Indoor: 2 courts
+- Volleyball Indoor: 2 courts
+- Table Tennis: 20 tables
+- Squash Courts: 4 international standard courts
+- Wrestling Hall: Olympic-standard mat
+- Gymnasium: Modern equipment, 200+ machines
+- Yoga and Meditation Hall: 500 capacity
+- Shooting Range: 10m and 25m ranges (planned)
 
-Gymnasium and shooting range
+Aquatic Facilities:
+- Olympic-size Swimming Pool: Under construction
+- Diving Pool: Planned
+- Water Sports: Kayaking, sailing (in campus lakes)
 
-Olympic-size swimming pool (planned)
+Sports Programs and Achievements:
+- University Teams: Participate in inter-university competitions
+- Sports Scholarships: Available for talented athletes
+- Coaching: Professional coaches for various sports
+- Annual Sports Meet: Inter-school competitions
+- National Participation: Students represent in national championships
 
-6. Research and Collaborations
+6. Research and Innovation Excellence
 
-PhD programs in all schools
+Research Infrastructure:
+- Central Research Facility: Advanced instrumentation
+- Innovation Labs: Student startup incubation
+- Research Centers: Specialized research in emerging areas
+- Library Research Support: Access to global databases
 
-Research funded by DBT, DST, CSIR, ICMR, etc.
+Funded Research Projects:
+- Government Funding: DBT, DST, CSIR, ICMR, UGC, AICTE
+- Industry Partnerships: Collaborative research projects
+- International Projects: Research collaborations with foreign universities
+- Student Research: Undergraduate and postgraduate research opportunities
 
-MoUs with international universities:
+Research Areas:
+- Biotechnology: Genetic engineering, drug discovery
+- Computer Science: AI, machine learning, cybersecurity
+- Engineering: Renewable energy, smart materials
+- Social Sciences: Rural development, policy research
+- Environmental Studies: Sustainability, climate change
 
-University of Queensland, Australia
+PhD Programs:
+- All Schools offer PhD programs
+- Research Fellowships: JRF, SRF, and university fellowships
+- Interdisciplinary Research: Cross-school collaborations
+- Publication Support: Journal publication assistance
+- Conference Participation: Funding for research presentations
 
-Kolding School of Design, Denmark
+Innovation and Entrepreneurship:
+- Startup Incubation Center: Support for student startups
+- Innovation Labs: Maker spaces with 3D printing, robotics
+- Entrepreneurship Development: Regular workshops and seminars
+- Industry Mentorship: Connect with successful entrepreneurs
+- Funding Support: Seed funding for promising startups
 
-Sheffield Hallam University, UK
+7. International Collaborations and Global Exposure
 
-Manchester Metropolitan University
+International Partner Universities:
 
-University of East London
+Australia:
+- University of Queensland: Student exchange, research collaboration
+- Griffith University: Joint degree programs
+- Deakin University: Faculty exchange
 
-7. Placements and Career Support
+United Kingdom:
+- Sheffield Hallam University: Dual degree programs
+- Manchester Metropolitan University: Research partnerships
+- University of East London: Student mobility programs
+- University of Bedfordshire: Academic collaborations
 
-Centralized Career Resource Centre (CRC)
+Europe:
+- Kolding School of Design, Denmark: Design and innovation programs
+- University of Applied Sciences, Germany: Engineering collaborations
+- Erasmus University, Netherlands: Research partnerships
 
-Recruiters: TCS, Wipro, Tekion, Freecharge, Axis Bank, HDFC, Genpact, Paytm, etc.
+Asia:
+- National University of Singapore: Research collaborations
+- Nanyang Technological University: Technology partnerships
+- Universities in Thailand, Malaysia: Student exchange
 
-Average package: INR 4.5 LPA (for BCA, 2023 data)
+North America:
+- State University of New York: Academic partnerships
+- Canadian universities: Research collaborations
 
-Highest package: Up to INR 24 LPA
+International Programs:
+- Student Exchange: Semester abroad opportunities
+- Faculty Exchange: Teaching and research visits
+- Joint Degree Programs: Dual qualifications
+- International Internships: Global work experience
+- Research Collaborations: Joint research projects
+- International Conferences: Hosting and participation
 
-8. Admissions
+Global Exposure Initiatives:
+- International Week: Annual cultural exchange
+- Foreign Language Courses: Multiple language options
+- Cultural Exchange Programs: Understanding global perspectives
+- International Student Community: Students from 15+ countries
 
-Through GBU Entrance Test (GPTU/GPT/GPTR) or CUET (UG/PG) depending on program
+8. Enhanced Placement and Career Support
 
-Direct admissions for foreign/NRI students
+Career Resource Centre (CRC):
+- Dedicated Placement Team: Industry professionals and alumni
+- Training Programs: Soft skills, technical skills, interview preparation
+- Industry Interface: Regular interaction with recruiters
+- Career Counseling: Individual guidance and mentoring
 
-9. Notable Features
+Recruitment Partners (100+ companies):
 
-Green campus with rainwater harvesting, forest buffer, solar lights
+IT and Software:
+- TCS, Infosys, Wipro, Cognizant, HCL, Tech Mahindra
+- Accenture, Capgemini, IBM, Microsoft, Amazon
+- Tekion, Freecharge, Paytm, Zomato, Swiggy
+- Startups and emerging tech companies
 
-Designed for sustainability and eco-friendliness
+Banking and Finance:
+- HDFC Bank, ICICI Bank, Axis Bank, SBI
+- Kotak Mahindra, Yes Bank, IDBI Bank
+- Insurance companies: LIC, HDFC Life, SBI Life
+- NBFCs and fintech companies
 
-Awarded as one of the most eco-friendly campuses in India
+Consulting and Analytics:
+- Deloitte, PwC, EY, KPMG
+- Genpact, WNS, Mu Sigma
+- Analytics companies and KPOs
 
-10. Contact & Website
+Core Engineering:
+- L&T, Tata Steel, BHEL, NTPC
+- Automobile: Maruti, Hyundai, Honda
+- Manufacturing and process industries
 
-Website: https://gbu.ac.in
+Government and PSUs:
+- DRDO, ISRO, Railways
+- Banking PSUs, Insurance companies
+- State government departments
 
-Email: registrar@gbu.ac.in
+Placement Statistics (Recent Years):
+- Overall Placement Rate: 85-90%
+- Average Package: INR 4.5-6 LPA
+- Highest Package: INR 24-35 LPA
+- Top Recruiters: Consistent hiring year after year
+- Salary Growth: Increasing trend over years
 
-Phone: +91-120-2344200 / 2344234
+Career Development Services:
+- Resume Writing: Professional resume building
+- Interview Preparation: Mock interviews, group discussions
+- Aptitude Training: Quantitative, logical, verbal
+- Personality Development: Communication, leadership skills
+- Industry Visits: Exposure to real work environments
+- Alumni Network: Mentorship and guidance
+- Entrepreneurship Support: Startup guidance and funding
 
-Address: Yamuna Expressway, Greater Noida, Uttar Pradesh, India
+9. Admission Process and Eligibility
+
+Undergraduate Admissions:
+
+Engineering (B.Tech):
+- Eligibility: 12th with PCM, minimum 50% marks
+- Entrance: JEE Main or GBU Entrance Test (GPTU)
+- Counseling: Merit-based seat allocation
+- Categories: General, OBC, SC, ST, PwD quotas
+
+Management (BBA):
+- Eligibility: 12th any stream, minimum 50%
+- Entrance: CUET or GBU entrance test
+- Group Discussion and Personal Interview
+
+Law (BA LLB, BBA LLB):
+- Eligibility: 12th any stream, minimum 45%
+- Entrance: CLAT or GBU Law entrance test
+- Duration: 5 years integrated program
+
+Other UG Programs:
+- BCA: 12th with mathematics
+- B.Sc.: 12th with relevant subjects
+- BA: 12th any stream
+
+Postgraduate Admissions:
+
+Engineering (M.Tech):
+- Eligibility: B.Tech/BE in relevant discipline
+- Entrance: GATE score preferred or GBU entrance test
+- Specializations available in all departments
+
+Management (MBA):
+- Eligibility: Bachelor's degree in any discipline
+- Entrance: CAT/MAT/XAT/CMAT or GBU entrance test
+- Work experience preferred but not mandatory
+
+Other PG Programs:
+- MCA: Bachelor's with mathematics
+- M.Sc.: Relevant bachelor's degree
+- MA: Bachelor's in relevant subjects
+
+PhD Admissions:
+- Eligibility: Master's degree in relevant field
+- Process: Entrance test followed by interview
+- Research Proposal: Required during interview
+- Fellowships: Available for qualified candidates
+
+Admission Support:
+- Counseling Services: Academic and career guidance
+- Documentation Help: Assistance with admission process
+- Scholarship Information: Financial aid options
+- Orientation Programs: For new students
+
+10. Student Life and Cultural Activities
+
+Cultural Events and Festivals:
+
+Annual Cultural Festival - "Abhivyakti":
+- Duration: 3-4 days of celebrations
+- Participation: Students from across India
+- Events: Music, dance, drama, fashion shows
+- Celebrity Performances: Renowned artists and performers
+- Prize Money: Substantial rewards for winners
+
+Technical Festival - "Technovation":
+- Focus: Technology and innovation
+- Competitions: Coding, robotics, project exhibitions
+- Industry Participation: Leading tech companies
+- Workshops: Latest technology trends
+
+Literary Festival - "Sahitya Sangam":
+- Poetry, debate, creative writing
+- Author interactions and book releases
+- Publishing opportunities for students
+
+Sports Festival - "Khel Mahakumbh":
+- Inter-university competitions
+- Professional coaching camps
+- Sports scholarships distribution
+
+Student Organizations and Clubs:
+
+Academic Clubs:
+- Computer Science Society
+- Robotics Club
+- Biotechnology Association
+- Debate and Literary Society
+- Economics Forum
+- Psychology Club
+
+Cultural Societies:
+- Music Society (Indian and Western)
+- Dance Groups (Classical and Contemporary)
+- Drama and Theatre Society
+- Photography Club
+- Art and Craft Society
+- Film Making Club
+
+Social Service:
+- NSS (National Service Scheme): 500+ volunteers
+- Community Service: Regular village adoption programs
+- Blood Donation Camps: Quarterly drives
+- Environmental Awareness: Tree plantation drives
+- Literacy Programs: Teaching underprivileged children
+
+Student Governance:
+- Student Union: Elected representatives
+- Hostel Committees: Student-led governance
+- Academic Committees: Student feedback incorporation
+- Grievance Committee: Issue resolution mechanism
+
+11. Campus Sustainability and Environmental Initiatives
+
+Green Campus Features:
+- Carbon Footprint: Working towards carbon neutrality
+- Energy Conservation: LED lighting, solar panels
+- Water Management: Rainwater harvesting, sewage treatment
+- Waste Management: Segregation, recycling, composting
+- Biodiversity: Native plant species, bird sanctuaries
+
+Environmental Programs:
+- Tree Plantation: Annual drives planting 1000+ trees
+- Organic Farming: Campus vegetable gardens
+- E-waste Management: Proper disposal and recycling
+- Plastic-free Campus: Initiatives to reduce plastic use
+- Environmental Awareness: Regular workshops and seminars
+
+Awards and Recognition:
+- Green Campus Award: Multiple environmental certifications
+- Sustainable University: Recognition by UGC
+- Solar Power: Significant renewable energy usage
+- Water Conservation: Best practices implementation
+
+12. Alumni Network and Industry Connections
+
+Alumni Achievements:
+- Industry Leaders: CEOs, CTOs in major companies
+- Entrepreneurs: Successful startup founders
+- Academia: Professors in prestigious institutions
+- Government Service: IAS, IPS, and other civil services
+- International Success: Alumni in global companies
+
+Alumni Association:
+- Regular Meetups: Annual alumni gatherings
+- Mentorship Programs: Career guidance for current students
+- Placement Support: Alumni helping in recruitment
+- Networking Events: Professional connections
+- Giving Back: Alumni contributing to university development
+
+Industry Advisory Boards:
+- Each school has industry experts
+- Curriculum Development: Industry-relevant courses
+- Research Guidance: Real-world problem solving
+- Placement Support: Direct recruitment opportunities
+
+13. Financial Information and Scholarships
+
+Fee Structure (Approximate Annual):
+- B.Tech: INR 1.5-2 lakhs
+- BBA/BCA: INR 80,000-1.2 lakhs
+- MBA: INR 2-2.5 lakhs
+- Hostel: INR 60,000-80,000
+- Mess: INR 40,000-50,000
+
+Scholarship Programs:
+- Merit Scholarships: Based on academic performance
+- Need-based Aid: For economically disadvantaged students
+- Sports Scholarships: For talented athletes
+- Cultural Scholarships: For exceptional performers
+- Research Fellowships: For PhD students
+- Government Schemes: SC/ST, OBC, minority scholarships
+
+Payment Options:
+- Installment Facility: Semester-wise payments
+- Education Loans: Tie-ups with major banks
+- Fee Waiver: For exceptional cases
+- Work-Study Programs: Part-time opportunities
+
+14. Support Services and Student Welfare
+
+Academic Support:
+- Remedial Classes: For struggling students
+- Tutoring Services: Peer and faculty mentoring
+- Library Assistance: Research support services
+- Computer Lab Access: Extended hours during exams
+- Academic Counseling: Regular guidance sessions
+
+Personal Support:
+- Counseling Services: Professional psychologists
+- Health Services: 24x7 medical facility
+- Grievance Redressal: Multiple channels for complaints
+- Anti-ragging Committee: Zero tolerance policy
+- Women's Cell: Safety and empowerment programs
+
+Special Needs Support:
+- Accessibility: Ramps, elevators for differently-abled
+- Special Accommodation: Customized learning support
+- Assistive Technology: Screen readers, magnifiers
+- Examination Support: Extended time, scribes
+
+15. Technology and Digital Infrastructure
+
+IT Services:
+- Campus-wide Wi-Fi: High-speed internet access
+- Learning Management System: Online courses and resources
+- Digital Library: Access to global databases
+- Software Licenses: Latest professional software
+- Cloud Services: Google Workspace, Microsoft 365
+
+Digital Learning:
+- Smart Classrooms: Interactive whiteboards, projectors
+- Online Courses: MOOCs and certification programs
+- Virtual Labs: Simulation-based learning
+- E-books and Journals: Extensive digital collection
+- Mobile Apps: University services on smartphones
+
+Innovation Labs:
+- Maker Spaces: 3D printing, laser cutting
+- IoT Lab: Internet of Things development
+- AI/ML Lab: Artificial Intelligence research
+- Robotics Lab: Advanced robotics projects
+- Cybersecurity Lab: Ethical hacking, security research
+
+16. Contact Information and Location Details
+
+Official Contact:
+- Website: https://gbu.ac.in
+- Email: registrar@gbu.ac.in
+- Phone: +91-120-2344200, 2344234
+- Fax: +91-120-2344235
+
+Admissions Contact:
+- Email: admissions@gbu.ac.in
+- Phone: +91-120-2344210
+- Helpline: +91-120-2344220
+
+Department Contacts:
+- Each school has dedicated contact numbers
+- Faculty email directory available online
+- Student helpdesk for queries
+
+Address:
+Gautam Buddha University
+Yamuna Expressway
+Greater Noida, Uttar Pradesh - 201312
+India
+
+Transportation:
+- Delhi Metro: Pari Chowk Metro Station (12 km)
+- Bus Service: Regular buses from Delhi, Noida
+- Taxi Services: Ola, Uber available
+- University Transport: Shuttle services from metro stations
+
+Emergency Contacts:
+- Security: 24x7 campus security
+- Medical Emergency: Campus hospital
+- Student Helpline: Round-the-clock support
+- Anti-ragging Helpline: Immediate response team
