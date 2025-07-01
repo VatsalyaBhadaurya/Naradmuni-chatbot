@@ -1,0 +1,15 @@
+ollama
+chromadb
+pymupdf
+python-docx
+pandas
+beautifulsoup4
+requests
+tqdm
+streamlit
+flask
+python-dotenv
+loguru
+nltk
+tiktoken
+playwright
