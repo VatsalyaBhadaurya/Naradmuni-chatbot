@@ -619,4 +619,13 @@ Emergency Contacts:
 - Security: 24x7 campus security
 - Medical Emergency: Campus hospital
 - Student Helpline: Round-the-clock support
-- Anti-ragging Helpline: Immediate response team
+- Anti-ragging Helpline: Immediate response team-
+
+----------------------------------------------------------------------------------------------------------
+                                            DIRECTORY
+
+Dr. Arpit Bhardwaj
+Email ID: arpit.bhardwaj@gbu.ac.in
+Mobile: 8878853111
+Education: Ph.D: Computer Science, IIT Indore, M.Tech: SGSITS Indore, B.Tech: SDITS Khandwa
+Specialization: Machine Learning, Deep Learning, EEG Signal, Genetic Programming

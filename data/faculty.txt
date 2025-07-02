@@ -1,0 +1,255 @@
+University School of Information and Communication technology
+
+Dr. Arpit Bhardwaj
+Email ID: arpit.bhardwaj@gbu.ac.in
+Mobile: 8878853111
+Education: Ph.D: Computer Science, IIT Indore, M.Tech: SGSITS Indore, B.Tech: SDITS Khandwa
+Specialization: Machine Learning, Deep Learning, EEG Signal, Genetic Programming
+Dr. Arun Solanki
+Email ID: asolanki@gbu.ac.in
+Mobile: Coming Soon
+Education: PhD(2014), Computer Science and Engineering, Gautam Buddha University, Greater Noida
+Specialization: Artificial Intelligence, Machine Learning, Deep Learning, NLP
+Dr. Aarti Gautam Dinker
+Email ID: aarti@gbu.ac.in
+Mobile: “Not mentioned”
+Education: Ph.D.
+Specialization: - “Unavailable”
+Dr. Anika
+Email ID: anika@gbu.ac.in
+Mobile: “Uavailable”
+Education: B.Tech. (CSE), M.E. (CSE) and Ph.D. (CSE)
+Specialization: Data Structures and Algorithms, Data Science and Artificial Intelligence
+Dr. Anurag Singh Baghel
+Email ID: asb@gbu.ac.in
+Mobile: Coming Soon
+Education: D.Phil(2010), University of Allahabad, Prayagraj
+Specialization: Artificial Intelligence, Soft Computing, Optimization Techniques, Algorithm Design, Embedded Systems
+Dr. Gaurav Kumar
+Email ID: gaurav.kumar@gbu.ac.in
+Mobile: 8586968801
+Education: B.Tech (Guru Gobind Singh University), M.Tech and PhD (Jawaharlal Nehru University)
+Specialization: Recommendation Systems, Machine learning, Decision Support Systems, Sentiment Analysis, Cyber Scams
+Dr. Nitesh Singh Bhati
+Email ID: nsbhati@gbu.ac.in
+Mobile: Coming Soon
+Education: Ph.D(CSE), M.Tech(CSE), B.Tech(CSE)
+Specialization: Cyber Security, Machine Learning, Information Security, Artificial Intelligence
+Dr. Pradeep Tomar
+Email ID: pradeep.tomar@gbu.ac.in
+Mobile: +91-9899874830
+Education: Ph.D. (CS), M.Tech. (CSE), MCA
+Specialization: Software Engineering, Artificial Intelligence
+Dr. Rajendra Bahadur Singh
+Email ID: rajendra@gbu.ac.in
+Mobile: 9719886323
+Education: Ph.D, M.Tech, B.Tech
+Specialization: Soft Computing, Data Analytics, IC Floorplanning
+Dr. Raju Pal
+Email ID: raju.pal@gbu.ac.in
+Mobile: 7840045107
+Education: PhD (CSE), M.Tech. (CSE), B.Tech (IT)
+Specialization: Machine Learning, Computer Vision, and Artificial Intelligence
+Dr. Rakesh Kumar
+Email ID: rakesh.k@gbu.ac.in
+Mobile: Unavailable
+Education: B.Tech., M.Tech., Ph.D.
+Specialization: Multicast Network, Vehicular IoT, Security Protocols, Wireless Sensor Networks and Artificial Intelligence
+Dr. Shiraz Khurana
+Email ID: shiraz.khurana@gbu.ac.in
+Mobile: 9466786100
+Education: B.Tech, M.Tech, Ph.D
+Specialization: Machine Learning, Virtual Reality, Augmented Reality, Computer Vision
+Dr. Rakesh Kumar
+Email ID: rakesh.kumar@gbu.ac.in
+Mobile: +91-9026422990
+Education: B.Tech., M.Tech., Ph.D.: IIT (BHU).
+Specialization: Software Engineering, Machine Learning, Data Science, Artificial Intelligence
+Dr. Vimlesh Kumar Ray
+Email ID: vimlesh@gbu.ac.in
+Mobile: Coming Soon
+Education: PhD ( Ad-hoc wireless networks),M.Tech.( Wireless communication and networks) , B.Tech. (Electronics and communication engineering)
+Specialization: signal and system, Control theory, Network theory, Ad-hoc wireless networks,
+Mr. Kartikeya Tiwari
+Email ID: kartikeya@gbu.ac.in
+Mobile: 9415033569
+Education: M.Tech (CSE), B.Tech (IT)
+Specialization: Programming, Database Management, Algorithm Design, Data Structure
+OCFD Faculty
+Aakash
+Email: Aakash@gbu.ac.in
+Phone: 9286894749
+Qualifications: Integrated M. Tech
+Akanksha Singh Rajput
+Email: akanksharajput.ocfd@gbu.ac.in
+Phone: 987302113
+Qualifications: B.Tech (CSE), M.Tech (CSE from IIT Guwahati)
+Anupriya Priyadarshani
+Email: anucsnec@gmail.com
+Phone: 9687787496
+Qualifications: M.TECH (Data Science & AI), IIIT RANCHI / B.TECH (CSE), NCE
+Archana
+Email: archana.ocfd@gbu.ac.in
+Phone: 9412878115
+Qualifications: M.Tech (CSE), Ph.D. (Pursuing)
+Ashi Gautam
+Email: ashigautam.ocfd@gbu.ac.in
+Phone: 8285828005
+Qualifications: M.Tech
+Charu Singh
+Email: charusingh.ocfd@gbu.ac.in
+Phone: 7080488876
+Qualifications: M.Tech (CSE), Ph.D.(CSE) Pursuing
+Sangeeta
+Email: sangeeta.ocfd@gbu.ac.in
+Phone: 8744908838
+Qualifications: B.Tech (CSE), M.Tech (Software Engineering)
+Prashant Gaurav
+Email: prashantgaurav.ocfd@gbu.ac.in
+Phone: 9798246370
+Qualifications: B.Tech (CSE), M.Tech (Artificial Intelligence and Robotics)
+Shashi Prabha Chahal
+Email: shashi.cs2101@gmail.com
+Phone: 9315884954
+Qualifications: M.Tech(CSE), Ph.D (pursuing)
+Sumedha Dangi
+Email: sumedha.ocfd@gbu.ac.in
+Phone: 8848725684
+Qualifications: Pursuing Ph.D., M.Tech, B.Tech.
+Vikash Patel
+Email: vikashpatel.ocfd@gbu.ac.in
+Phone: 9654173780
+Qualifications: B. Tech (CSE), M.Tech(Artificial Intelligence and Robotics)
+Vishvajeet Yadav
+Email: vishvajeetyadav.ocfd@gbu.ac.in
+Phone: 9628349743
+Qualifications: M.Tech(Artificial Intelligence and Robotics), B.Tech(CSE)
+Department of ECE
+Dr. Vidushi Sharma
+Email ID: vidushi@gbu.ac.in
+Mobile: Coming Soon
+Education: Ph.D. Computer Science, M.Tech. , M.Sc. Computer Science
+Specialization: Information technology, Sensor network, Internet of things, Technology Management
+Dr. Mangal Das
+Email ID: mangal.das@gbu.ac.in
+Mobile: Coming Soon
+Education: Indian Institute of Technology Indore
+Specialization: Semiconductor Fabrication Nanotechnology Robotics AI
+Dr. Navaid Zafar Rizvi
+Email ID: navaid@gbu.ac.in
+Mobile: Coming Soon
+Education: PhD , M.S- Inf. & Comm. Engg. (TUD-Darmstadt, Germany), M.S- Microsystems Engg. (HFU, Germany)
+Specialization: Machine Intelligence for ICs, MEMS/VLSI Design, Antenna & Microwave Techniques & RF Technology, Microsystems Fabrication
+Dr. Priyanka Goyal
+Email ID: priyankag@gbu.ac.in
+Mobile: Coming Soon
+Education: PhD (2018) in Optoelectronics and VLSI (On-chip optical interconnects)
+Specialization: Field of teaching- Basic electronics, Analog Communication, Network Analysis and Synthesis, VHDL, Verilog, Low Power VLSI, Automation and Physical Design, Principles
+Dr. Rajesh Mishra
+Email ID: rmishra@gbu.ac.in
+Mobile: +919717949251
+Education: B.E. (Electronics Engineering), M. Tech. & Ph.D. (IIT Kharagpur)
+Specialization: Networks, Signal Processing, Communication Systems, Reliability Engineering, RAMS
+Dr. Vivek Chaudhary
+Email ID: vivek.chaudhary@gbu.ac.in
+Mobile: Coming Soon
+Education: PhD. (IIT Delhi) || M.Tech (IIT Roorkee) || B.Tech (UPTU, Lucknow)
+Specialization: Wireless Communication, Physical Layer Security, Integrated Sensing and Communication, Full-Duplex Radios, New Waveforms for Next Generation Wireless Networks
+Department of IT
+Prof. Sanjay Kumar Sharma
+Email ID: sanjay.sharma@gbu.ac.in
+Mobile: Coming Soon
+Education: Ph. D. 1993, Kurukshetra University, Kurukshetra
+Specialization: Information Technology, Artificial Intelligence,Nanotechnology, Research Methodology, Research & Publication Ethics
+Dr. Neeta Singh
+Email ID: neeta@gbu.ac.in
+Mobile: 9990715153
+Education: Ph.D. (Computer Science), M.Tech. ICT, Masters in Computers and Management, BSc.(PCM)
+Specialization: Computer Networks, Wireless Networks, Mobile Computing, Wireless Technology, MANETs, VANETs, Next Generation Networks
+Dr. Akash Kumar
+Email ID: akash.kumar@gbu.ac.in
+Mobile: 9549539572
+Education: Ph.D. (IIIT-Allahabad), M.Tech. (IIIT-Allahabad), B.Tech. (UCE, RTU, Kota)
+Specialization: Battery Less Wireless Sensor Network, Internet of Things, Energy Harvesting, UAVs, Machine Learning, BlockChain
+Dr. Maneet Singh
+Email ID: maneet.singh@gbu.ac.in
+Mobile: Coming Soon
+Education: PhD (Indian Institute of Technology Ropar)
+Specialization: Opinion Mining, Social Network Analysis, Computational Social Science and Machine Learning
+OCfD Faculty
+Anajana Mall
+Email: anjana71086@gmail.com
+Phone: 09754127644
+Qualifications: BE, M. Tech, PhD.(Pursuing) (ECE)
+Harishchandra Prasad
+Email: harishfet77@gmail.com
+Phone: 7906431303
+Qualifications: B.E.,M.Tech, PhD.(Pursuing)
+Anand Prakash Raw
+Email: anandprao0712@gmail.com
+Phone: 9076853989
+Qualifications: B.Tech. (IT), M.Tech. (Computer Science and Technology)
+Dr Ana Kumar
+Email: anakumar98277@gmail.com
+Phone: 9529156840
+Qualifications: B.TECH, M.TECH, PHD
+Kamala Kant Yadav
+Email: kamlakant17@gmail.com
+Phone: 7985755009
+Qualifications: M.Tech (CSE), B.Tech (IT), UGC-NET and GATE Qualified
+Deepshikha Gautam
+Email: deepgtm27@gmail.com
+Phone: 8800753935
+Qualifications: Integrated B.tech- M.tech
+Shiromani Balmukund Rahi
+Email: sbrahi@gmail.com
+Phone: 9264991975
+Qualifications: M.Tech, Ph.D. PDF
+Diazy Singh
+Email: DAIZY.SINGH2511@GMAIL.COM
+Phone: 8750698263
+Qualifications: M.tec (wireless and communications Network) B.tec (Electronic and communications Engineering)
+Brijesh Sahani
+Email: brijesh08.sahani07@gmail.com
+Phone: 9559368331
+Qualifications: M.Tech (ECE)
+Neeraj Kaushik
+Email: kaushikneeraj6178@gmail.com
+Phone: 9999929416
+Qualifications: MCA,PhD(pursuing)
+Sugandha Yadav
+Email: sugandhayadav555@gmail.com
+Phone: 9899494690
+Qualifications: M Tech
+Aniruddh Singh
+Email: aniruddhsingh3011@gmail.com
+Phone: 7291951506
+Qualifications: Integrated dual degree Btech+Mtech
+Sarvesh Kumar
+Email: sarve9787@gmail.com
+Phone: 9540509787
+Qualifications: B.Tech. and M.Tech.
+Bhupendra Kumar
+Email: bkumar1984@gmail.com
+Phone: 9015642832
+Qualifications: M.tech
+Preeti Paras
+Email: preetiparas100@gmail.com
+Phone: 7599997481
+Qualifications: M.Tech & MCA
+Preeti Bhati
+Email: bpreeti.bhati@gmail.com
+Phone: 9910849698
+Qualifications: B.Tech , M.Tech
+Prakash Chandra Saraswat
+Email: prakash.saraswat73@gmail.com
+Phone: 9803199996
+Qualifications: M.C.A.,M.B.A
+Usman Ahmad
+Email: usmanahmad7866692@gmail.com
+Phone: 9013858872
+Qualifications: M.Tech
+Atul Kumar
+Email: atulk9888@gmail.com
+Phone: 9891007332
+Qualifications: B.Tech,M.Tech
