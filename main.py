@@ -79,11 +79,38 @@ def embed_documents(chunks):
     except Exception as e:
         print(f"❌ Error in embed_documents: {str(e)}")
         return False
+    
+    
+# Function to check if the query is relevant to GBU context or just random bakwas
+def is_relevant_query(prompt, threshold=0.6):
+    try:
+        client = chromadb.PersistentClient(path="./embeddings")
+        collection = client.get_collection("gbu_docs")
+        query_embedding = get_embedding(prompt)
+        if query_embedding is None:
+            return False
+
+        results = collection.query(
+            query_embeddings=[query_embedding],
+            n_results=1,
+            include=["distances"]
+        )
+
+        # Distance close to 0 = very similar. 1 = not similar (for cosine)
+        distance = results.get("distances", [[1]])[0][0]
+        return distance < threshold
+    except Exception as e:
+        print(f"⚠️ Error in is_relevant_query: {str(e)}")
+        return False
+
 
 def answer_query(prompt):
     try:
         client = chromadb.PersistentClient(path="./embeddings")
         collection = client.get_collection("gbu_docs")
+        
+        if not is_relevant_query(prompt):
+            return "I don't know about that, ask me about GBU"
 
         query_embedding = get_embedding(prompt)
         if query_embedding is None:
