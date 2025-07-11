@@ -186,6 +186,15 @@ def chat():
         })
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+    
+@app.route('/transcribe', methods=['POST'])
+def transcribe():
+    if 'audio' not in request.files:
+        return jsonify({'error': 'No audio file provided'}), 400
+
+    audio_file = request.files['audio']
+    text = transcribe_audio(audio_file)
+    return jsonify({'transcription': text})
 
 @app.route('/', methods=['GET'])
 def home():
@@ -284,6 +293,9 @@ def home():
                     <div id="chat-container">
                         <input type="text" id="question" placeholder="Ask a question about GBU..." onkeypress="handleKeyPress(event)">
                         <button onclick="askQuestion()">Ask</button>
+                        <!-- 🎤 Live voice recording -->
+                            <button onclick="startRecording()" style="margin-top: 10px;">🎤 Speak</button>
+                            <span id="recording-status"></span>
                         <div id="answer"></div>
                     </div>
                 </div>
@@ -540,6 +552,62 @@ def home():
                 function handleKeyPress(event) {
                     if (event.key === 'Enter') {
                         askQuestion();
+                    }
+                }
+                let mediaRecorder;
+                let audioChunks = [];
+
+                async function startRecording() {
+                    const status = document.getElementById('recording-status');
+                    status.textContent = '🎙️ Recording... Click again to stop.';
+                    
+                    // Request mic access
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    mediaRecorder = new MediaRecorder(stream);
+
+                    audioChunks = [];
+
+                    mediaRecorder.ondataavailable = event => {
+                        audioChunks.push(event.data);
+                    };
+
+                    mediaRecorder.onstop = async () => {
+                        const blob = new Blob(audioChunks, { type: 'audio/webm' });
+                        const formData = new FormData();
+                        formData.append('audio', blob, 'recording.webm');
+
+                        const answerDiv = document.getElementById('answer');
+                        answerDiv.className = 'loading';
+                        answerDiv.textContent = 'Transcribing voice...';
+
+                        try {
+                            const response = await fetch('/transcribe', {
+                                method: 'POST',
+                                body: formData
+                            });
+
+                            const data = await response.json();
+                            if (data.transcription) {
+                                document.getElementById('question').value = data.transcription;
+                                answerDiv.textContent = `Transcribed: "${data.transcription}"`;
+                                askQuestion();  // Auto-ask after transcription
+                            } else {
+                                answerDiv.className = 'error';
+                                answerDiv.textContent = 'Failed to transcribe voice.';
+                            }
+                        } catch (error) {
+                            answerDiv.className = 'error';
+                            answerDiv.textContent = 'Voice upload failed.';
+                        }
+
+                        status.textContent = '';
+                    };
+
+                    // Toggle start/stop
+                    if (mediaRecorder.state === 'recording') {
+                        mediaRecorder.stop();
+                    } else {
+                        mediaRecorder.start();
                     }
                 }
             </script>

@@ -4,6 +4,54 @@ import fitz
 import ollama
 import chromadb
 from tqdm import tqdm
+import whisper
+import tempfile
+from werkzeug.utils import secure_filename
+
+from rapidfuzz import process
+
+# Important GBU-specific terms you care about
+important_keywords = [
+    "Gautam Buddha University",
+    "GBU",
+    "B.Tech CSE",
+    "B.Tech AI",
+    "M.Tech",
+    "MBA",
+    "PhD",
+    "hostel",
+    "admission",
+    "placement",
+    "campus",
+    "fees",
+    "scholarship",
+    "exam",
+    "UG",
+    "PG",
+    "faculty",
+    "NAAC",
+    "NIRF",
+    "prospectus",
+    "department",
+    "library",
+    "canteen",
+    "engineering",
+    "contact",
+]
+
+# Whisper karne ke liye whisper model load kar rahe hain, eaves drop nahi karega pakka promise
+whisper_model = whisper.load_model("small")  # or "base", "medium", "large"
+
+def transcribe_audio(file):
+    try:
+        filename = secure_filename(file.filename)
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as temp_audio:
+            file.save(temp_audio.name)
+            result = whisper_model.transcribe(temp_audio.name)
+            return result["text"]
+    except Exception as e:
+        return f"Error during transcription: {str(e)}"
+
 
 # Dummy file to suppress stderr output, jaise main apne dosto ki bakwas sunta hoon
 class DummyFile:
@@ -82,23 +130,57 @@ def embed_documents(chunks):
     
     
 # Function to check if the query is relevant to GBU context or just random bakwas
-def is_relevant_query(prompt, threshold=0.6):
+# Added lightweight autocorrect and fuzzy matching for better query handling(optional par contextual 🎓📝 prompt ke liye madad karega)
+from fuzzywuzzy import fuzz
+from textblob import TextBlob
+
+def correct_prompt(user_prompt, threshold=85):
+    """
+    Fuzzy correct only known important keywords to prevent distortion of proper nouns.
+    """
+    corrected = user_prompt
+    words = user_prompt.split()
+    for word in words:
+        result = process.extractOne(word, important_keywords, score_cutoff=threshold)
+        if result:
+            match, score, _ = result
+            if match.lower() != word.lower():
+                corrected = corrected.replace(word, match)
+
+    return corrected
+
+
+def is_relevant_query(prompt, threshold=0.35): 
     try:
         client = chromadb.PersistentClient(path="./embeddings")
         collection = client.get_collection("gbu_docs")
-        query_embedding = get_embedding(prompt)
+
+        corrected_prompt = correct_prompt(prompt)
+        print(f"✅ Corrected Prompt (for relevance): {corrected_prompt}")
+
+        query_embedding = get_embedding(corrected_prompt)
         if query_embedding is None:
             return False
 
         results = collection.query(
             query_embeddings=[query_embedding],
-            n_results=1,
-            include=["distances"]
+            n_results=3,
+            include=["documents", "distances"]
         )
 
-        # Distance close to 0 = very similar. 1 = not similar (for cosine)
-        distance = results.get("distances", [[1]])[0][0]
-        return distance < threshold
+        documents = results.get("documents", [[]])[0]
+        distances = results.get("distances", [[1]])[0]
+
+        if not documents:
+            return False
+
+        # Check fuzzy similarity against top doc
+        top_doc = documents[0]
+        similarity = fuzz.token_set_ratio(corrected_prompt, top_doc)
+
+        print(f"🔍 Embedding similarity: {1 - distances[0]}, Fuzzy similarity: {similarity}")
+
+        return (1 - distances[0]) > threshold or similarity > 65
     except Exception as e:
         print(f"⚠️ Error in is_relevant_query: {str(e)}")
         return False
@@ -109,24 +191,25 @@ def answer_query(prompt):
         client = chromadb.PersistentClient(path="./embeddings")
         collection = client.get_collection("gbu_docs")
         
-        if not is_relevant_query(prompt):
+        if not is_relevant_query(prompt):  # use original prompt
             return "I don't know about that, ask me about GBU"
 
-        query_embedding = get_embedding(prompt)
+        query_embedding = get_embedding(prompt)  # again, original prompt
         if query_embedding is None:
             return "Sorry, I couldn't process your question at the moment"
 
         results = collection.query(
-            query_embeddings=[query_embedding],  # Wrap in list as required by ChromaDB
+            query_embeddings=[query_embedding],
             n_results=3
         )
         
-        documents = results["documents"]
-        if not documents or not documents[0]:
+        documents = results.get("documents", [[]])[0]
+        if not documents:
             return "No matching docs found for your query"
 
-        context = "\n".join(doc[0] for doc in documents)
-        prompt = f"""You are a helpful university assistant for Gautam Buddha University. Use the context below to answer the question clearly and concisely.
+        context = "\n".join(doc for doc in documents)
+
+        final_prompt = f"""You are a helpful university assistant for Gautam Buddha University. Use the context below to answer the question clearly and concisely.
 
 Context:
 {context}
@@ -136,7 +219,7 @@ Question:
 
 Answer:"""
 
-        response = ollama.generate(model="mistral", prompt=prompt)
+        response = ollama.generate(model="mistral", prompt=final_prompt)
         if not response or "response" not in response:
             return "Sorry, I couldn't generate a response at the moment"
             
@@ -144,7 +227,7 @@ Answer:"""
 
     except Exception as e:
         error_msg = str(e)
-        print(f"Error in answer_query: {error_msg}")  # Log the error
+        print(f"Error in answer_query: {error_msg}")
         if "no such column" in error_msg:
             return "Database error occurred. Please restart the server to rebuild the database."
         return f"Error ho gaya bhai: {error_msg} huihuihi"
