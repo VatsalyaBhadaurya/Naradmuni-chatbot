@@ -135,8 +135,11 @@ from textblob import TextBlob
 
 def correct_prompt(user_prompt, threshold=85):
     """
-    Fuzzy correct only known important keywords to prevent distortion of proper nouns.
+    Fuzzy correct only known important keywords to prevent distortion of short or generic prompts.
     """
+    if len(user_prompt.strip().split()) <= 2 and user_prompt.lower() in ["hi", "hello", "hey", "how are you"]:
+        return user_prompt  # don't alter common greetings
+
     corrected = user_prompt
     words = user_prompt.split()
     for word in words:
@@ -147,6 +150,7 @@ def correct_prompt(user_prompt, threshold=85):
                 corrected = corrected.replace(word, match)
 
     return corrected
+
 
 
 def is_relevant_query(prompt, threshold=0.35): 
@@ -187,6 +191,11 @@ def is_relevant_query(prompt, threshold=0.35):
 
 def answer_query(prompt):
     try:
+        # ⛔ Direct responses for common greetings
+        cleaned = prompt.lower().strip()
+        if any(cleaned.startswith(greet) for greet in ["hi", "hello", "hey", "how are you", "good morning", "good evening"]):
+            return "Hello! How can I help you today?"
+
         client = chromadb.PersistentClient(path="./embeddings")
         collection = client.get_collection("gbu_docs")
         
